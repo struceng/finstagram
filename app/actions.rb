@@ -3,3 +3,12 @@ get '/' do
 
     erb(:index)  
 end
+
+get '/signup' do         #if user navigates to the path "/signup",
+    @user = User.new     # setup empty @User object
+    erb(:signup)         # render "app/views/signup.erb"
+end
+
+post '/signup' do
+    params.to_s
+end
